@@ -1,17 +1,17 @@
 
-## Developed by:LATHISH KANNA.M
-## Register Number: 21222230073
+## NAME :LATHISH KANNA.M
+## REGISTER NO : 212222230073
 
-# Exp 6 Synchornous counters up counter and down counter 
+# Exp-6-SYNCHORNOUS-COUNTERS - UP COUNTER AND DOWN COUNTER 
 ### AIM: 
 To implement 4 bit up and down counters and validate  functionality.
-### HARDWARE REQUIRED: 
-– PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:  
+### HARDWARE REQUIRED:  
+PC, Cyclone II , USB flasher
+### SOFTWARE REQUIRED:   
 Quartus prime
-### THEORY :
+### THEORY 
 
-#### UP COUNTER 
+## UP COUNTER 
 The counter is a digital sequential circuit and here it is a 4 bit counter, which simply means it can count from 0 to 15 and vice versa based upon the direction of counting (up/down). 
 
 The counter (“count“) value will be evaluated at every positive (rising) edge of the clock (“clk“) cycle.
@@ -43,7 +43,7 @@ Four-bit “Up” Counter
 
 
 
-### DOWN COUNTER 
+## DOWN COUNTER 
 
 As well as counting “up” from zero and increasing or incrementing to some preset value, it is sometimes necessary to count “down” from a predetermined value to zero allowing us to produce an output that activates when the zero count or some other pre-set value is reached.
 
@@ -53,35 +53,28 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-
-1. Create a New Project:
-   - Open Quartus and create a new project by selecting "File" > "New Project Wizard."
-   - Follow the wizard's instructions to set up your project, including specifying the project name, location, and target device (FPGA).
-
-2. Create a New Design File:
-   - Once the project is created, right-click on the project name in the Project Navigator and select "Add New File."
-   - Choose "Verilog HDL File" or "VHDL File," depending on your chosen hardware description language.
-
-3. Write the Combinational Logic Code:
-   - Open the newly created Verilog or VHDL file and write the code for your combinational logic.
-     
-4. Compile the Project:
-   - To compile the project, click on "Processing" > "Start Compilation" in the menu.
-   - Quartus will analyze your code, synthesize it into a netlist, and perform optimizations based on your target FPGA device.
-
-5. Analyze and Fix Errors:*
-   - If there are any errors or warnings during the compilation process, Quartus will display them in the Messages window.
-   - Review and fix any issues in your code if necessary.
-   - View the RTL diagram.
-
-6.*Verification:
-   - Click on "File" > "New" > "Verification/Debugging Files" > "University Program VWF".
-   - Once Waveform is created Right Click on the Input/Output Panel > " Insert Node or Bus" > Click on Node Finder > Click On "List" > Select All.
-   - Give the Input Combinations according to the Truth Table amd then simulate the Output Waveform.
+```
+1.Create a new project in QuartusII software.
+2.Name the project as uc for upcounter and dc for down counter.
+3.Create a new verilog hdl file in the project file.
+4.Name the module as dc and uc for down counter and up counter.
+5.Within the module declare input and output variables.
+6.Create a loop using if-else with condition parameter as reset value.
+7.End the loop.
+8.End the module.
+```
 
 
-### PROGRAM :
-##### UP COUNTER:
+
+### PROGRAM 
+```
+/*
+Program for flipflops  and verify its truth table in quartus using Verilog programming.
+Developed by: Divya.K
+RegisterNumber: 212222230035
+*/
+```
+#### UP COUNTER:
 ```
 module Counters(clk,A);
 input clk;
@@ -95,7 +88,7 @@ begin
 end
 endmodule
 ```
-##### DOWN COUNTER:
+#### DOWN COUNTER:
 ```
 module dCounters(clk,A);
 input clk;
@@ -108,32 +101,38 @@ begin
 	A[0]=1^A[0];
 end
 endmodule
-
 ```
 
-### RTL DIAGRAM:
-##### UP COUNTER:
-![image](https://github.com/Vanitha-SM/Exp-7-Synchornous-counters-/assets/119557985/2f103830-b413-4d9f-939e-07498344a3e2)
-
-##### DOWN COUNTER:
-![image](https://github.com/Vanitha-SM/Exp-7-Synchornous-counters-/assets/119557985/2341e65d-35c0-46bc-b2c5-f3795faae3c2)
+### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+#### UP COUNTER:
+![image](https://github.com/Jaiganesh235/Exp-6-Synchornous-counters-/assets/118657189/21a764f7-7623-4773-9c1a-5596fa793a0c)
 
 
 
-### TRUTH TABLE:
-##### UP COUNTER:
-![image](https://github.com/Vanitha-SM/Exp-7-Synchornous-counters-/assets/119557985/c125587d-32ff-43f9-87a5-30bfed8e3412)
-
-##### DOWN COUNTER:
-![image](https://github.com/Vanitha-SM/Exp-7-Synchornous-counters-/assets/119557985/23e5c131-8603-4643-9a48-10ecc506e5d7)
-
-### OUTPUT WAVEFORM:
-##### UP COUNTER:
-![image](https://github.com/Vanitha-SM/Exp-7-Synchornous-counters-/assets/119557985/411e5f0a-ac2f-40b5-b0b0-027eca15c407)
+#### DOWN COUNTER:
+![image](https://github.com/Jaiganesh235/Exp-6-Synchornous-counters-/assets/118657189/c50e6119-92fa-4325-8d4f-48bda2c535c5)
 
 
-##### DOWN COUNTER:
-![image](https://github.com/Vanitha-SM/Exp-7-Synchornous-counters-/assets/119557985/c5f3bb37-8f11-45da-b8df-f5cbf4db42a8)
 
-### RESULT: 
+### TIMING DIAGRAMS FOR COUNTER  
+#### UP COUNTER
+![image](https://github.com/Jaiganesh235/Exp-6-Synchornous-counters-/assets/118657189/32c085a6-28b6-471b-a0f6-f4eaf69998ee)
+
+
+#### DOWN COUNTER
+![image](https://github.com/Jaiganesh235/Exp-6-Synchornous-counters-/assets/118657189/715ea572-9659-4786-a87d-e490376a0ffd)
+
+
+
+### TRUTH TABLE 
+#### UP COUNTER
+![image](https://github.com/Jaiganesh235/Exp-6-Synchornous-counters-/assets/118657189/3bb80ba1-802f-4b29-9b05-e2883755bb61)
+
+
+#### DOWN COUNTER
+![image](https://github.com/Jaiganesh235/Exp-6-Synchornous-counters-/assets/118657189/26e364d2-d30e-48f8-9e46-5ceeb264fe4d)
+
+
+
+### RESULT
 Thus Synchornous counters up counter and down counter circuit are studied and the truth table for different logic gates are verified.
