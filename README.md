@@ -83,29 +83,29 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ### PROGRAM :
 ##### UP COUNTER:
 ```
-module upcounter(D,C,B,A,CLK);
-output reg D,C,B,A;
-input CLK;
-always @(posedge CLK)
+module Counters(clk,A);
+input clk;
+output reg [3:0]A;
+always @(posedge clk)
 begin
-	D=(C&B&A)^D;
-	C=(B&A)^C;
-	B=(A^B);
-	A=(1^A);
+	A[3]=(((A[0])&(A[1])&(A[2]))^A[3]);
+	A[2]=(((A[0])&(A[1]))^A[2]);
+	A[1]=(A[0])^A[1];
+	A[0]=A[0]^1;
 end
 endmodule
 ```
 ##### DOWN COUNTER:
 ```
-module downcounter(A,B,C,D,CLK);
-input CLK;
-output reg A,B,C,D;
-always@(posedge CLK)
+module dCounters(clk,A);
+input clk;
+output reg [3:0]A;
+always@(posedge clk)
 begin
-	A=(((~B)&(~C)&(~D))^A);
-	B=(((~C)&(~D))^B);
-	C=((~D)^(C));
-	D=1^(D);
+	A[3]=(((~A[0])&(~A[1])&(~A[2]))^A[3]);
+	A[2]=(((~A[0])&(~A[1]))^A[2]);
+	A[1]=(~A[0])^A[1];
+	A[0]=1^A[0];
 end
 endmodule
 
